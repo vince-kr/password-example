@@ -27,10 +27,8 @@ class Password {
         return true;
     }
 
-    /*
     @Override
     public String toString() {
         return userPassword;
     }
-     */
 }
