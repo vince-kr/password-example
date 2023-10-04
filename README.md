@@ -197,7 +197,7 @@ class Password {
 }
 ```
 
-While writing this exercise, I learned that it is not possible to extend the `String` class. I'm not sure what the thinking is, but it makes for some interesting differences in *usage* between the Python and Java versions. For example, unlike Python, we need to define a `toString()` method that returns our password - if we tried to print our class without defining `toString()` it would simply print the memory address.
+While writing this exercise, I learned that it is not possible to extend the `String` class. I'm not sure what the thinking is, but it makes for some interesting differences in *usage* between the Python and Java versions. For example, unlike Python, we need to define a `toString()` method that returns our password - if we tried to print our Password object without defining `toString()` it would only print the object's address in memory.
 
 The `SPECIAL_CHARS` field is now properly private and readonly (`final`), and `userPassword` is similarly encapsulated. The constraints are still captured inside a method, because of the same reason as in Python: if they were an instance *variable*, then Java would want to resolve the boolean expressions at runtime, which is not possible as long as a class instance does not exist. I decided to use an array of boolean expressions because working with sets was unnecessarily complicated.
 
